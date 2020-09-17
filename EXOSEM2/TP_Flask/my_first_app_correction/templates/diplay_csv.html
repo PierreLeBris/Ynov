@@ -1,0 +1,36 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link type="text/css" rel="stylesheet" href="static/bootstrap.min.css">
+  </head>
+  <body class="container">
+    <div class="row header">
+      <div class="col">
+        <h1>Data is coming!</h1>
+      </div>
+    </div class="row header">
+    <div class="row">
+      <div>
+        <table border = 1>
+          <thead>
+            <tr>
+              {% for col in df["columns"] %}
+              <th>{{ col }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for raw in df["data"] %}
+              <tr>
+                {% for val in raw %}
+                <td>{{ val }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

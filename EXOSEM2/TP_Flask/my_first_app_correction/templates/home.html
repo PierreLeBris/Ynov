@@ -1,0 +1,24 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home Page</title>
+    <link type="text/css" rel="stylesheet" href="static/bootstrap.min.css">
+  </head>
+  <body class="container">
+    <div class="row header">
+      <div class="col">
+        <h1>Data is coming!</h1>
+      </div>
+    </div>
+    <div class="row">
+      <form action = "http://localhost:5000/display_csv" method = "POST" enctype = "multipart/form-data">
+        <div class="entree">
+          <input class="form-control-file" type = "file" name = "file" />
+        </div>
+        <div class= "bouton">
+          <button type="submit">Valider</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
